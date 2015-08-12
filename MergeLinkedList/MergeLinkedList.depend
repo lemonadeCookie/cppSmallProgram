@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1337050478 source:e:\my documents\programming area\c++\mergelinkedlist\main.cpp
+	<iostream>
+	<iomanip>
+	"LkList.h"
+
+1337049994 source:e:\my documents\programming area\c++\mergelinkedlist\lklist.cpp
+	"LkList.h"
+	<iostream>
+
+1337049994 e:\my documents\programming area\c++\mergelinkedlist\lklist.h
+	<string>
+
+1337069198 source:c:\documents and settings\luo kai\desktop\student test\mergelinkedlist\main.cpp
+	<iostream>
+	<iomanip>
+	"LkList.h"
+
+1337049996 c:\documents and settings\luo kai\desktop\student test\mergelinkedlist\lklist.h
+	<string>
+
+1337068720 source:c:\documents and settings\luo kai\desktop\student test\mergelinkedlist\lklist.cpp
+	"LkList.h"
+	<iostream>
+
+1369803978 source:c:\users\administrator.ngwd63jtswwa00f\desktop\mergelinkedlist\lklist.cpp
+	"LkList.h"
+	<iostream>
+
+1337049996 c:\users\administrator.ngwd63jtswwa00f\desktop\mergelinkedlist\lklist.h
+	<string>
+
+1369658550 source:c:\users\administrator.ngwd63jtswwa00f\desktop\mergelinkedlist\main.cpp
+	<iostream>
+	<iomanip>
+	"LkList.h"
+

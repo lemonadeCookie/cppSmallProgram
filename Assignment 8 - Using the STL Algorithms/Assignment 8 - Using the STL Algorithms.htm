@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Assignment 8 - Using the STL Algorithms</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#3333FF" VLINK="#800080" ALINK="#FFFF00">
+<CENTER>
+  <hr width=80%>
+  <center>
+    <h1><b><font face="Times New Roman">Assignment 8</font></b> </h1>
+  </center>
+  <hr width=80%>
+  <h2 align="left"><font size="5">Using the STL</font> Algorithms and with your 
+    code <br>
+  </h2>
+</CENTER>
+<blockquote>
+  <p> For this program you will get some practice using the STL and it's Algorithms. 
+    Your program is going to be very similiar to the main from program 4 &amp; 
+    5 with some small changes. <b>Note:</b> in this program you will be use the 
+    C++ string class, not your TJUString</p>
+</blockquote>
+<p><b><font size="+2">Program Requirements: {reading and writing to files NEEDS 
+  to be done with stream interator adapters......and yes, when you are done with 
+  the file variables, you should close them}</font></b></p>
+<p><b>You will need a couple new things for the program</b></p>
+<blockquote>
+  <p>A function that can be used with <b>transform</b>:</p>
+  <p>string punctRemover(const string&amp; strIn); \\ fuction prototype</p>
+  <p>Example of using/testing:<br>
+    string str(&quot;h*\'e&amp;l\)\&quot;l#o*&quot;);<br>
+    str = punctRemover(str);<br>
+    cout &lt;&lt; &quot;string: &quot; &lt;&lt; str &lt;&lt; &quot;\n\n&quot;; 
+    \\ would print out hello</p>
+  <p>A <b>Functor</b> (called AscDictSort) to do string comparisons that are can 
+    sort correctly strings that are both upper and lower case for example using 
+    it apple &lt; Ask would be true. If this was an ASCI comparison (the normal 
+    string &lt; ), then this would be false. This functor will be used by your 
+    set to do the sorting.</p>
+  <p>Remember cctype library has many helper functions {<a href="http://www.cplusplus.com/reference/clibrary/cctype/">Link 
+    to cctype reference</a>}</p>
+  <p><b>Note:</b> string also has iterators and begin( ) and end( ) functions 
+    and so you can use the STL's Algorithms with strings. Not required, but can 
+    be useful.</p>
+</blockquote>
+<p><b>Your Main should do this</b></p>
+<blockquote> 
+  <p><i>-create 4 set&lt;string, AscDictSort&gt; objects ( set1, set2, modSet1, 
+    modSet2 ). Note: modSet stands for modified set. AscDictSort is the sorting 
+    functor. The name is short for Ascending Dictionary Sort<br>
+    -read all of the data from file1 into set1 using the transform function. During 
+    the transform, you can call your punctRemover function that will make a new 
+    copy of the input string, but the new string will not have punctuation ( .&quot;',? 
+    and so on)<br>
+    -read all of the data from file2 and transform it as above before inserting 
+    it into set2<br>
+    -cout the size of the 4 sets with explaining text (what size goes with which 
+    set)<br>
+    -modSet1 = set1<br>
+    -modSet2 = set2<br>
+    -cout the size of the 4 sets with explaining text <br>
+    -remove from modSet1 all of the strings from set2 <br>
+    -remove from modSet2 all of the strings from set1<br>
+    -cout the size of the 4 sets with explaining text <br>
+    -output modSet1 to outfile1.txt with a space between each string<br>
+    -output modSet2 to outfile2.txt with a space between each string </i></p>
+</blockquote>
+<p><b>Files:</b> <a href="inputFiles.zip">Zipped input files</a> contains file1.txt, 
+  file2.txt</p>
+<p><b>Additional Note</b>: if you compare lower-case versions of the strings you 
+  will get the following results, when you are reading from file1.txt, your set1 
+  variable should contain 1,589 strings. Your modSet1 after removing all the strings 
+  from set2 should have 1059 strings still left. If however, you compare lower-case 
+  versions of the strings but if they are equal in this comparison, then you sort 
+  them with the leading upper-case first, you will get a different results.....set1 
+  would have 1768 and mset1 would have 1191. Both of these results are ok. Just 
+  for curiousity sake, what can be observe about the sets insert function based 
+  on the above?</p>
+<p>Header files I used during the writing of the lectures (note: you shouldn't 
+  need all of these for your program):</p>
+<pre>#include &lt;iostream&gt;<br>#include &lt;vector&gt;<br>#include &lt;algorithm&gt;<br>#include &lt;set&gt;<br>#include &lt;string&gt;<br>#include &lt;list&gt;<br>#include &lt;iterator&gt;<br>#include &lt;fstream&gt;<br>#include &lt;utility&gt;  // for pair</pre>
+<p><font face="Times New Roman"><b>Due: </b> Before the start of lab on June 6th, 
+  or 7th depending on which class you are in. This program is short but has new 
+  concepts so don't wait until the last night.</font></p>
+<p><b>Turn in: </b>A paper copy of your program, (main, with program header. For 
+  the output, you need to get the information from the screen, and the text that 
+  is written to <b>outfile2.txt</b> (you do not need to print outfile1.txt)....outfile2 
+  will be shorter than outfile1.</p>
+<p><b>Ways to lose points:</b></p>
+<ul>
+  <li>if your file does not contain the program header with a program description 
+    and short function descriptions to accompany the function prototypes(for functions 
+    used with main). </li>
+  <li>your .h file should have a class description about what the class does</li>
+  <li>your code should also be consistently indented as talked about in class, 
+    and shown in the book</li>
+  <li>you can not use global variables unless it is a const</li>
+  <li>you should use good variable names (descriptive, and start with lower case 
+    letter )</li>
+  <li>proper placement of { and } ( a } should not be placed at the end of a line)</li>
+  <li>no staple to keep your papers together (folding a corner or using a paper 
+    clip are not good enough)</li>
+</ul>
+<p><b>Comments: </b>Comments are a way of documenting a program (explaining who 
+  did what and how). All programs for the rest of the course are required to have 
+  the following header documentation and inline documentation to explain any tricky 
+  pieces of code.</p>
+<pre>// File Name:    Actual name of file (like assign7.cpp)
+// Author:       Your Name (both in Pinyin and Hanzi (the Hanzi can be handwritten))
+// Student Number: 123456789
+// Assignment:   #
+// Description:  Short description of the program (at least a couple sentences - also you should
+//				 say where the input data come from, what information is output, 
+//               and is the outputted data sent to the screen or a file).  
+//
+
+
+#include &lt;iostream&gt;
+.......the rest of the program</pre>
+<pre>&nbsp;</pre>
+<blockquote>
+  <pre>&nbsp;</pre>
+</blockquote>
+</BODY>
+</HTML>

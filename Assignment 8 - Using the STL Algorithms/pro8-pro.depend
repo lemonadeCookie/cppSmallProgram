@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1370239749 source:e:\大学各种\课件 资料 作业\c++\罗凯老师\罗凯老师上机训练与作业\pro8-pro\main.cpp
+	<iostream>
+	<string>
+	<cctype>
+	<algorithm>
+	<set>
+	<iterator>
+	<fstream>
+
